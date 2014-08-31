@@ -1,0 +1,20 @@
+{
+  "name": "nodeuserapi",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "restart": "nodemon app.js"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "bcrypt": "^0.8.0",
+    "body-parser": "^1.6.7",
+    "dotenv": "^0.4.0",
+    "errorhandler": "^1.1.1",
+    "express": "^4.8.7",
+    "mongoose": "^3.8.15",
+    "nodemon": "^1.2.1",
+    "underscore": "^1.7.0"
+  }
+}
