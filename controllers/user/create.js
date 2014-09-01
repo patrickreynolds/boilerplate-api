@@ -11,9 +11,9 @@ module.exports = (function() {
     newUser.updated_at  = Date.now();
 
     newUser.save(function(err) {
-      if (err) res.send(err);
+      if (err) res.json(err);
       console.log("** Created " + newUser.username + " **");
-      res.send({status: "Created: " + req.body.username})
+      res.json({status: "Created: " + req.body.username})
     });
   };
 })();

@@ -5,9 +5,9 @@ module.exports = (function() {
     User.remove({
       _id: req.params.id
     }, function(err, user) {
-      if (err) res.send(err);
+      if (err) res.json(err);
       console.log('\n\n** Deleted user with id ' + req.params.id + ' **\n\n');
-      res.send({status: "Deleted user " + req.params.id});
+      res.json({status: "Deleted user " + req.params.id});
     });
   };
 })();

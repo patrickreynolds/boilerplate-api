@@ -3,7 +3,7 @@ var User = require('../../models/user');
 module.exports = (function() {
   return function update(req, res, next) {
     User.findById(req.params.id, function(err, user) {
-      if (err) res.send(err);
+      if (err) res.json(err);
 
       user.username = req.body.username;
       user.email    = req.body.email;
@@ -11,9 +11,9 @@ module.exports = (function() {
 
       var updatedUser = user;
       user.save(function(err) {
-        if (err) res.send(err);
+        if (err) res.json(err);
         console.log("\n\n** Updated " + updatedUser.username + " **\n\n");
-        res.send(user);
+        res.json(user);
       });
     });
   };
