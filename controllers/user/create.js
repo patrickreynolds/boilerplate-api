@@ -13,7 +13,6 @@ module.exports = (function() {
     newUser.save(function(err) {
       if (err) res.json(err);
       console.log("** Created " + newUser.username + " **");
-      res.json({status: "Created: " + req.body.username})
     });
   };
 })();
