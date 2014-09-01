@@ -13,7 +13,6 @@ module.exports = (function() {
       user.save(function(err) {
         if (err) res.json(err);
         console.log("\n\n** Updated " + updatedUser.username + " **\n\n");
-        res.json(user);
       });
     });
   };
