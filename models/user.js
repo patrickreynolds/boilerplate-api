@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var crypto = require('crypto'); // TODO
-var bcrypt = require('bcrypt'); // TODO
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema
+var crypto = require('crypto') // TODO
+var bcrypt = require('bcrypt') // TODO
 
 var userSchema = new Schema({
   username: {
@@ -26,4 +26,4 @@ var userSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema)
