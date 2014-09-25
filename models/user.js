@@ -1,7 +1,5 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
-var crypto = require('crypto') // TODO
-var bcrypt = require('bcrypt') // TODO
 
 var userSchema = new Schema({
   username: {

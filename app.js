@@ -1,7 +1,6 @@
 var express    = require('express'), // Express framework
     mongoose   = require('mongoose'), // MongoDB Mapping
     bodyParser = require('body-parser'), // Request body parsing
-    dotenv     = require('dotenv'), // Hiding env variables
     config     = require('./config'), // Config options
     app        = express() // Creating the express app
 
@@ -24,6 +23,6 @@ require('./routes')(app)
 app.listen(config.server.port, function() {
   var status = 'Express server listening on port ' + 
                 app.get('port') + ' in ' + 
-                app.settings.env + ' mode'
+                app.get('env') + ' mode.'
   console.log(status)
 })
